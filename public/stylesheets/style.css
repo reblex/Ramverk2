@@ -1,8 +1,225 @@
-body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*
+ * Globals
+ */
+
+@media (min-width: 48em) {
+    html {
+        font-size: 18px;
+    }
 }
 
-a {
-    color: #00B7FF;
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #555;
+    margin-bottom: 80px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #333;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+.container {
+    max-width: 60rem;
+}
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+    margin-bottom: 3rem;
+    background-color: #428BCA;
+    -webkit-box-shadow: inset 0 -0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+/* Nav links */
+
+.nav-link {
+    position: relative;
+    padding: 1rem;
+    font-weight: 500;
+    color: #CDDDEB;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Active state gets a caret at the bottom */
+
+.nav-link.active {
+    color: #fff;
+}
+
+.nav-a:hover {
+    text-decoration: none;
+}
+
+.nav-link.active::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -0.3rem;
+    vertical-align: middle;
+    content: "";
+    border-right: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid;
+    border-left: 0.3rem solid transparent;
+}
+
+/**
+ * Main
+ */
+.main {
+    min-height: 100%;
+    height: 100%;
+    margin-bottom: 120px;
+}
+
+/*
+ * Blog name and description
+ */
+.blog-header {
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.me {
+    width: 85%;
+    margin: auto;
+}
+
+.js-img {
+    margin-left: 20px;
+    height: 40%;
+    max-height: 60px;
+    width: 40%;
+    max-width: 60px;
+}
+
+.me img {
+    width: 40%;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.blog-description {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+@media (min-width: 40em) {
+    .blog-title {
+        font-size: 3.5rem;
+    }
+}
+
+/*
+ * Main column and sidebar layout
+ */
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+    padding: 1rem;
+}
+
+.sidebar-module-inset {
+    padding: 1rem;
+    background-color: #F5F5F5;
+    border-radius: 0.25rem;
+}
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+}
+
+/* Pagination */
+
+.blog-pagination {
+    margin-bottom: 4rem;
+}
+
+.blog-pagination > .btn {
+    border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+    margin-bottom: 4rem;
+}
+
+.blog-post-title {
+    margin-bottom: 0.25rem;
+    font-size: 2.5rem;
+}
+
+.blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+    color: #999;
+    text-align: center;
+    background-color: #F9F9F9;
+    border-top: 0.05rem solid #e5e5e5;
+    line-height: 80px;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
 }

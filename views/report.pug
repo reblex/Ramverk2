@@ -1,0 +1,16 @@
+extends layout
+
+block main
+    div(class="main")
+        div(class="blog-header")
+            div(class="container")
+                div.row
+                    h1.left(class="blog-title") Redovisningar
+
+        div.container
+            div.row
+                div.col-sm-8.blog-main
+                    div.blogpost
+                        h2.blog-post-title Kmom01
+                        p.blog-post-meta 30 Oktober 2017
+                            include:markdown-it ../content/reports/kmom01.md

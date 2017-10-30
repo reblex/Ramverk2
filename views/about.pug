@@ -1,0 +1,13 @@
+extends layout
+
+block main
+    div(class="main")
+        div(class="blog-header")
+            div(class="container")
+                div.row
+                    h1.left(class="blog-title") Om kursen Ramverk 2
+                    img.left.js-img(src="/images/js.png")
+
+        div(class="container")
+          div(class="row")
+            include:markdown-it ../content/about.md
