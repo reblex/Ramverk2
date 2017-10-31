@@ -1,0 +1,35 @@
+version: "3"
+services:
+    node88:
+        image: "node:8.8"
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - "3088:3000"
+        command: "npm start"
+    node80:
+        image: "node:8"
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - "3080:3000"
+        command: "npm start"
+    node60:
+        image: "node:6"
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - "3060:3000"
+        command: "npm start"
