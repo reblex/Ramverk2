@@ -276,10 +276,10 @@ eslint-fix:
 jsunittest:
 	@$(call HELPTEXT,$@)
 ifneq ($(wildcard .nycrc),)
-	$(NYC) $(MOCHA) --reporter dot 'test/**/*.js'
+	$(NYC) $(MOCHA) --reporter list 'test/**/*.js'
 else
-	$(MOCHA) --reporter dot 'test/**/*.js'
-endif 
+	$(MOCHA) --reporter list 'test/**/*.js'
+endif
 
 
 
