@@ -1,35 +1,37 @@
 version: "3"
 services:
-    node88:
-        image: "node:8.8"
-        user: "node"
-        working_dir: /home/node/app
-        environment:
-            - NODE_ENV=production
+    node_latest:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-latest
         volumes:
-            - ./:/home/node/app
+            - ./:/app/
         ports:
-            - "3088:3000"
-        command: "npm start"
-    node80:
-        image: "node:8"
-        user: "node"
-        working_dir: /home/node/app
-        environment:
-            - NODE_ENV=production
+            - "3000:3000"
+
+    node_9:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-9
         volumes:
-            - ./:/home/node/app
+            - ./:/app/
         ports:
-            - "3080:3000"
-        command: "npm start"
-    node60:
-        image: "node:6"
-        user: "node"
-        working_dir: /home/node/app
-        environment:
-            - NODE_ENV=production
+            - "3000:3000"
+
+    node_8:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-8
         volumes:
-            - ./:/home/node/app
+            - ./:/app/
         ports:
-            - "3060:3000"
-        command: "npm start"
+            - "3000:3000"
+
+    node_7:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-7
+        volumes:
+            - ./:/app/
+        ports:
+            - "3000:3000"
