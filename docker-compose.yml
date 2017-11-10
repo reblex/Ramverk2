@@ -8,6 +8,7 @@ services:
             - ./:/app/
         ports:
             - "3000:3000"
+        command: bash -c "make test"
 
     node_9:
         build:
@@ -17,6 +18,7 @@ services:
             - ./:/app/
         ports:
             - "3000:3000"
+        command: bash -c "make test"
 
     node_8:
         build:
@@ -26,6 +28,7 @@ services:
             - ./:/app/
         ports:
             - "3000:3000"
+        command: bash -c "make test"
 
     node_7:
         build:
@@ -35,3 +38,4 @@ services:
             - ./:/app/
         ports:
             - "3000:3000"
+        command: bash -c "make test"
