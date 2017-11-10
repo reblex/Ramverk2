@@ -2,6 +2,9 @@
 logs
 *.log
 
+# NYC Output during tests
+.nyc_output
+
 # Runtime data
 pids
 *.pid

@@ -131,7 +131,7 @@ test: htmlhint stylelint jscs eslint jsunittest #csslint
 
 # target: doc                - Generate documentation.
 .PHONY: doc
-doc: 
+doc:
 	@$(call HELPTEXT,$@)
 
 
@@ -219,7 +219,7 @@ check-tools-js:
 .PHONY: htmlhint
 htmlhint:
 	@$(call HELPTEXT,$@)
-	[ ! -f .htmlhintrc ] || $(HTMLHINT) --ignore build/**,node_modules/** | grep -v "Config loaded:"
+	[ ! -f .htmlhintrc ] || $(HTMLHINT) --ignore build/**,node_modules/**,coverage/* | grep -v "Config loaded:"
 
 
 
@@ -275,12 +275,7 @@ eslint-fix:
 .PHONY: jsunittest
 jsunittest:
 	@$(call HELPTEXT,$@)
-ifneq ($(wildcard .nycrc),)
-	$(NYC) $(MOCHA) --reporter list 'test/**/*.js'
-else
-	$(MOCHA) --reporter list 'test/**/*.js'
-endif
-
+	$(NYC) --reporter=html --reporter=text $(MOCHA) 'test/**/*.js'
 
 
 

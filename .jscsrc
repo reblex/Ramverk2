@@ -1,4 +1,5 @@
 {
+	"excludeFiles": ["node_modules/**", "coverage/**"],
 	"validateIndentation": {
 		"value": 4,
 		"allExcept": ["comments", "emptyLines"]
