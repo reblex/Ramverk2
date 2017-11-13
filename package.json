@@ -3,7 +3,8 @@
     "version": "2.0.0",
     "private": true,
     "scripts": {
-        "start": "node ./bin/www"
+        "start": "node ./bin/www",
+        "report-codecov": "nyc report --reporter=lcov > coverage.lcov && codecov"
     },
     "dependencies": {
         "body-parser": "~1.18.2",

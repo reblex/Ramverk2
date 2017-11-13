@@ -16,3 +16,5 @@ before_script:
 
 script:
     - make test
+after_success:
+    - npm run report-codecov
