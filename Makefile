@@ -125,6 +125,29 @@ check: check-tools-js #check-tools-bash check-tools-php
 .PHONY: test
 test: htmlhint stylelint jscs eslint jsunittest #csslint
 
+# target: test-node-latest   - Run all tests with node_latest Docker container.
+.PHONY: test-node-latest
+test-node-latest:
+	@$(ECHO) 'Running tests with latest NodeJS'
+	@docker-compose run node_latest
+
+# target: test-node-9        - Run all tests with node_latest Docker container.
+.PHONY: test-node-9
+test-node-9:
+	@$(ECHO) 'Running tests with Node version 9'
+	@docker-compose run node_9
+
+# target: test-node-8        - Run all tests with node_latest Docker container.
+.PHONY: test-node-8
+test-node-8:
+	@$(ECHO) 'Running tests with Node version 8'
+	@docker-compose run node_8
+
+# target: test-node-7        - Run all tests with node_latest Docker container.
+.PHONY: test-node-7
+test-node-7:
+	@$(ECHO) 'Running tests with Node version 7'
+	@docker-compose run node_7
 
 # target: doc                - Generate documentation.
 .PHONY: doc
