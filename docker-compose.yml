@@ -29,13 +29,3 @@ services:
         ports:
             - "3000:3000"
         command: bash -c "make test"
-
-    node_7:
-        build:
-            context: .
-            dockerfile: docker/Dockerfile-node-7
-        volumes:
-            - ./:/app/
-        ports:
-            - "3000:3000"
-        command: bash -c "make test"
