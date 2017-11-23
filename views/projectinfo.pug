@@ -1,0 +1,11 @@
+extends layout
+
+block main
+    div(class="main")
+        div(class="blog-header")
+            div(class="container")
+                h1(class="blog-title") Info om min app
+        div(class="container")
+          div(class="row")
+            div(class="me")
+                include:markdown-it ../content/projectInfo.md

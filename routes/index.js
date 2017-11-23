@@ -24,5 +24,12 @@ router.get("/redovisningar", (req, res) => {
     });
 });
 
+router.get("/projektinfo", (req, res) => {
+    res.render("projectinfo", {
+        title: 'Projektinfo',
+        path: '/projektinfo',
+    });
+});
+
 
 module.exports = router;
