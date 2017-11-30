@@ -31,5 +31,12 @@ router.get("/projektinfo", (req, res) => {
     });
 });
 
+router.get("/chatt", (req, res) => {
+    res.render("chat", {
+        title: 'Chatt',
+        path: '/chatt',
+    });
+});
+
 
 module.exports = router;

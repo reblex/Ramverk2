@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<form id="form1">
+    <p>
+        <label>Connect: </label><br>
+        <input id="connect_url" type="text" value="ws://localhost:3000/">
+        <select id="protocol">
+    <option value="text">Text<i>(Default)</i></option>
+    <option value="json">JSON</option>
+</select>
+        <br>
+        <input id="connect" type="button" value="Connect">
+        <input id="close" type="button" value="Close connection">
+    </p>
+
+    <p>
+        <label>Send message: </label><br>
+        <input id="message" type="text">
+        <input id="send_message" type="button" value="Send message">
+    </p>
+
+    <p>
+        <label>Log: </label><br>
+        <div id="chatLog" class="chatLog"></div>
+    </p>
+
+</form>
+
+<script src="/javascripts/broadcast-client.js"></script>
